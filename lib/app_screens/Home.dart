@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
             alignment: Alignment.center,
             // width: 200.0,
             // height: 100.0,
-            padding: EdgeInsets.only(top:40.0,left:10.0),
+            padding: EdgeInsets.all(40.0),
             color: Colors.blueAccent,
             child: Column(
               children: <Widget>[
@@ -34,8 +34,7 @@ class Home extends StatelessWidget {
                           color: Colors.white),
                     )),
                   ],
-                )
-                ,
+                ),
                 Row(
                   children: <Widget>[
                     Expanded(
@@ -57,8 +56,17 @@ class Home extends StatelessWidget {
                               color: Colors.white),
                         )),
                   ],
-                )
+                ),
+                ImageAsset()
               ],
             )));
+  }
+}
+class ImageAsset extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage('images/june.png');
+    Image image = Image(image: assetImage);
+    return Container(child: image,padding: EdgeInsets.all(10.0),);
   }
 }
