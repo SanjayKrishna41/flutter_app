@@ -12,7 +12,15 @@ class Home extends StatelessWidget{
           margin: EdgeInsets.only(left :10.0,right: 10.0),
           padding: EdgeInsets.all(5.0),
           color: Colors.blueAccent,
-          child: Text("Flight",textDirection: TextDirection.ltr),
+          child: Text(
+              "Flight",
+              textDirection: TextDirection.ltr,
+            style: TextStyle(
+              decoration: TextDecoration.none,
+              fontSize: 40.0,
+              color: Colors.deepOrange
+            ),
+          ),
         )
     );
   }
